@@ -10,23 +10,21 @@ import { AuthComponent } from './auth/auth.component';
 import { MainModule } from './main/main.module';
 import { FeedComponent } from './shared/feed/feed.component';
 import { ModalComponent } from './shared/modal/modal.component';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProfileComponent,
-    AuthComponent,
-    FeedComponent,
-    ModalComponent
+    AuthComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MainModule
+    MainModule,
+    SharedModule
   ],
   providers: [],
-  bootstrap: [AppComponent],
-  entryComponents: [ModalComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
