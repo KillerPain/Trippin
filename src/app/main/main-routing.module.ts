@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MainComponent } from './main.component';
 import { FeedComponent } from '../shared/feed/feed.component';
+import { ProfileComponent } from '../shared/profile/profile.component';
 
 const routes: Routes = [
   {
@@ -11,7 +12,15 @@ const routes: Routes = [
       {
         path: 'feed',
         component: FeedComponent
-      }
+      },
+      {
+        path: 'profile',
+        component: ProfileComponent
+      },
+      {
+        path: 'trip/:id',
+        component: ProfileComponent
+      },
     ]
   }
 ];

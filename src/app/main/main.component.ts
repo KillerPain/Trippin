@@ -15,7 +15,7 @@ export class MainComponent implements OnInit {
 
   ngOnInit() {
     const factory = this.cfr.resolveComponentFactory(ModalComponent);
-    const componentRef = this.pageContainer.createComponent(factory);
+    // const componentRef = this.pageContainer.createComponent(factory);
   }
 
 }
