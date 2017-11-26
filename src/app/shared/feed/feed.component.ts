@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { FeedService } from './feed.service';
 
 @Component({
   selector: 'tm-feed',
@@ -7,9 +8,14 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class FeedComponent implements OnInit {
 
-  constructor() { }
+  planItems;
+
+  constructor(private service: FeedService) { }
 
   ngOnInit() {
+    this.service.getPlanItems().subscribe( data => {
+      this.planItems = data.Trips[0].PlanItems;
+    });
   }
 
 }
